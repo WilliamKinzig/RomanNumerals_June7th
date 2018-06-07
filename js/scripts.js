@@ -1,20 +1,18 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-      var inputNum = parseInt($("input#person1").val());
+
+    event.preventDefault();
+      var inputNum = $("input#person1").val();
 
       var output = convertedNumber(inputNum);
 
-      $("#story").text(output)
+      $("#story").text(output);
 
-    event.preventDefault();
   });
 });
 
 
 var convertedNumber = function(x){
-  if(x === 0){
-    return x;
-    console.log("dkfjsal");
-
-  }
+  var inNumArray = x.split("");
+  console.log(inNumArray);
 }
